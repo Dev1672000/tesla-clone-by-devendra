@@ -17,8 +17,8 @@ function Section({ title, description, leftBtnText, rightBtnText, backgroundImg 
 
         <
         h1 > { title } < /h1>    <
-        p > { description } < /p>   <
-        /ItemText> <
+        p > { description } < /p>   < /
+        ItemText > <
         /Fade> <
         Buttons >
         <
@@ -49,6 +49,7 @@ function Section({ title, description, leftBtnText, rightBtnText, backgroundImg 
     export default Section
 
     const Wrap = styled.div ` 
+
 width:100vw;
 height:100vh;
 background-size:cover;
@@ -64,6 +65,7 @@ background-image: ${props => `url("/images/${props.bgImage}")`}
 const ItemText=styled.div`
 padding-top:15vh;
 text-align:center;
+z-index:-1;
 `
 
  const ButtonGroup=styled.div`
