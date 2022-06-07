@@ -25,11 +25,34 @@ function Header() {
 
         <
         a href = '#' > Shop < /a>  <
-        a href = '#' > Tesla Account < /a>    <
+        a href = '#' > Tesla Account < /a>     <
         CustomMenu / >
 
         <
         /RightMenu >
+
+
+        <
+        BurgerNav >
+        <
+        li > < a href = '#' > Existing inventory < /a></li >
+        <
+        li > < a href = '#' > Used inventory < /a></li >
+
+        <
+        li > < a href = '#' > Trade - in < /a></li >
+        <
+        li > < a href = '#' > Cybertruck < /a></li >
+        <
+        li > < a href = '#' > Roadaster < /a></li >
+        <
+        li > < a href = '#' > Existing inventory < /a></li >
+        <
+        li > < a href = '#' > Existing inventory < /a></li >
+        <
+        li > < a href = '#' > Existing inventory < /a></li >
+        <
+        /BurgerNav>
 
 
         <
@@ -47,7 +70,7 @@ position:fixed;
 display:flex;
 
 align-items:center;
-justify-content;
+justify-content:space-between;
 padding:0 20px;
 top:0;
 left:0;
@@ -83,8 +106,11 @@ a {
    
 }`
 
-// const CustomMenu = styled(MenuIcon)
-// `
-// cursor:pointer;
+const CustomMenu = styled(MenuIcon)
+`
+cursor:pointer;
 
-// `
+`
+const BurgerNav = styled.div `
+
+`
