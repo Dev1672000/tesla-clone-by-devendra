@@ -12,54 +12,30 @@ function Header() {
 
   return (
     <Container>
-      <a>
-        <img src="/images/logo.svg" alt="" />
-      </a>{" "}
+      <img src="/images/logo.svg" alt="" />
+
       <Menu>
-        {" "}
         {cars &&
           cars.map((car, index) => (
-            <a key={index} href="#">
-              {" "}
-              {car}{" "}
-            </a>
+            <p>
+              key = {index} {car}
+            </p>
           ))}
-      </Menu>{" "}
+      </Menu>
       <RightMenu>
-        <a href="#"> Shop </a> <a href="#"> Tesla Account </a>{" "}
+        Shop Tesla Account
         <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
       <BurgerNav show={burgerStatus}>
         <CloseWrapper>
-          <CustomClose onClick={() => setBurgerStatus(false)} />{" "}
-        </CloseWrapper>{" "}
-        {cars &&
-          cars.map((car, index) => (
-            <li key={index}>
-              {" "}
-              <a href="#"> {car} </a>
-            </li>
-          ))}
-        <li>
-          {" "}
-          <a href="#"> Existing inventory </a>
-        </li>
-        <li>
-          {" "}
-          <a href="#"> Used inventory </a>
-        </li>
-        <li>
-          {" "}
-          <a href="#"> Trade - in </a>
-        </li>
-        <li>
-          {" "}
-          <a href="#"> Cybertruck </a>
-        </li>
-        <li>
-          {" "}
-          <a href="#"> Roadaster </a>
-        </li>
+          <CustomClose onClick={() => setBurgerStatus(false)} />
+        </CloseWrapper>
+        {cars && cars.map((car, index) => <li key={index}>{car}</li>)}
+        <li>Existing inventory</li>
+        <li>Used inventory</li>
+        <li>Trade - in</li>
+        <li>Cybertruck</li>
+        <li>Roadaster</li>
       </BurgerNav>
     </Container>
   );
